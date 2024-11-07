@@ -3,19 +3,36 @@
 ## Answer 1 Create a Simple Component
 
 ```js
-// Write your code here
+function Welcome () {
+  return (
+     <h1>Welcome to React!</h1>
+  )
+}
 ```
 
 ## Answer 2 Create a Bigger Component
 
 ```js
-// Write your code here
+function Hello () {
+  return (
+     <>
+     <p>Hello</p>
+     <p>World!</p>
+     </>
+  )
+  
+}
 ```
 
 ## Answer 3 Create an Image Component
 
 ```js
-// Write your code here
+function ProfilePicture () {
+  return (
+    <img src="../assets/image/profile-picture.jpg" alt="'The users profile picture'" />
+  )
+}
+
 ```
 
 ## Answer 4 Create a Component that Uses Variables
@@ -24,16 +41,24 @@
 const name = "John Doe";
 const age = "30";
 
-// Write your code here
+function UsesVariables () {
+  return (
+    <>
+    <p>{name}</p>
+    <p>{age}</p>
+    </>
+  )
+}
+
 ```
 
 ## Answer 5 Is the Code Correct? Components
 
+the apple component is not actually not a component it is a function. Therefor the Shoppinglist component will not render the <li> on the browser. I think that it will still render the h1 tag still because that is written correctly at least.
+
 ## Answer 6 Export a Component
 
 ```js
-// Modify the code below
-
 const TableOfContents = () => {
   return (
     <div>
@@ -49,30 +74,32 @@ const TableOfContents = () => {
     </div>
   );
 };
+
+export default TableOfContents
 ```
 
 ## Answer 7 Import a Component
 
 ```js
-// This is the Gallery.js file
-// Write your code here
+import Profile from 'components/Profile.js'
 ```
 
 ## Answer 8 Is the Code Correct? JSX
 
+No I think the h1 tag and the ul tag are siblings so the code needs a break around both elements to render.
+
 ## Answer 9 Fix the JSX Bugs
 
 ```js
-// Modify the code below
-
 const Bio = () => {
   return (
-    <div class="intro">
+    <div className="intro">
       <h1>Welcome to my website!</h1>
     </div>
-    <p class="summary">
+    <p className="summary">
       You can find my thoughts here.
-      <br><br>
+      <br />
+      <br />
       <b>And <i>pictures</b></i> of scientists!
     </p>
   );
@@ -82,17 +109,23 @@ const Bio = () => {
 ## Answer 10 Create a Component with a Prop
 
 ```js
-// Write your code here
+function Greeting (prop) {
+  return ( 
+    <p>Hello {prop.name}</p>
+  )
+}
 ```
 
 ## Answer 11 Pass a Prop to a Component
 
 ```js
+import Greeting from './Greeting.js'
+
 const App = () => {
-  // Add your Greeting component here
+  <Greeting name="with any string value you like" />
 };
 ```
 
 ## Answer 12 Bain's talk
 
-
+I learnt that we as a class were not respectively responsive to our guest speaker Bain except for a select few. We will need to try better to support our guests going foward.
